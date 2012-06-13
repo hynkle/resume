@@ -1,0 +1,44 @@
+body {
+  font-family: Enriqueta, serif;
+  margin: 4em 4em;
+  margin-bottom: 0; }
+
+h1 {
+  border-bottom: 1pt solid black; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right;
+  text-align: right; }
+
+.clearfix {
+  overflow: hidden; }
+
+.two-col {
+  display: table; }
+  .two-col section {
+    display: table-row; }
+    .two-col section .label, .two-col section .details {
+      padding: 1em 0;
+      display: table-cell; }
+    .two-col section .label {
+      vertical-align: top;
+      font-variant: small-caps;
+      white-space: nowrap;
+      padding-right: 2em; }
+    .two-col section .details {
+      width: 100%; }
+      .two-col section .details .date {
+        float: right;
+        font-weight: bold;
+        margin-left: 2em; }
+      .two-col section .details ul {
+        padding: 0 0 0 1em;
+        margin: 0;
+        margin-bottom: 1em; }
+        .two-col section .details ul.flushleft {
+          padding-left: 0; }
+        .two-col section .details ul li {
+          list-style: none; }

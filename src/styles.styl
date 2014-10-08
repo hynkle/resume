@@ -1,0 +1,72 @@
+smush-up()
+  margin-top 0
+  padding-top 0
+  
+smush-down()
+  margin-bottom 0
+  padding-bottom 0
+
+html
+  box-sizing border-box
+
+*, *:before, *:after
+  box-sizing inherit
+
+body
+  width 700px
+  font-family Enriqueta, Georgia, serif
+  display flex
+  flex-flow row wrap
+  font-size 16px
+
+h1
+  flex 1 100%
+
+h2, h3
+  font-size inherit
+
+h2
+  width 125px
+  float left
+  clear right
+  text-align right
+  border-right 1px solid black
+  padding-right 26px
+  font-variant small-caps
+  margin 0
+  margin-bottom 37px
+
+h3
+  display inline-block
+  margin 0
+  font-size inherit
+
+section
+  width 575px
+  float right
+  padding-left 26px
+  margin-bottom 37px
+
+  & *:first-child
+    smush-up()
+
+  & *:last-child
+    smush-down()
+
+.dates
+  font-weight bold
+  float right
+
+ul
+  padding-left 21px
+
+ul.bare, li.bare
+  list-style none
+  padding-left 0
+  margin 0
+
+.smush-down
+  smush-down()
+
+.smush-up
+  smush-up()

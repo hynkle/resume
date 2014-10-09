@@ -1,0 +1,6 @@
+{
+  "accessKeyId": "AKIAXXXXXXXXXXXXXXXX",
+  "secretAccessKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "bucket": "bucket-name",
+  "prefix": "path/within/bucket"
+}

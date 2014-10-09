@@ -1,0 +1,21 @@
+{
+  "name": "jonathan-hinkle-resume",
+  "description": "Jonathan Hinkle's resume",
+  "author": "Jonathan Hinkle",
+  "version": "0.1.0",
+  "devDependencies": {
+    "broccoli": "^0.13.1",
+    "broccoli-autoprefixer": "^1.1.0",
+    "broccoli-clean-css": "^0.2.0",
+    "broccoli-file-mover": "0.3.6",
+    "broccoli-htmlmin": "^1.2.0",
+    "broccoli-jade": "^1.0.0",
+    "broccoli-merge-trees": "^0.2.0",
+    "broccoli-static-compiler": "^0.2.1",
+    "broccoli-stylus": "^1.2.0",
+    "grunt": "^0.4.5",
+    "grunt-aws-s3": "^0.9.4",
+    "grunt-broccoli-build": "^0.4.0",
+    "grunt-contrib-clean": "^0.6.0"
+  }
+}

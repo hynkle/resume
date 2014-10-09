@@ -1,2 +1,4 @@
 dist
 tmp
+aws.json
+node_modules

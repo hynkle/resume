@@ -13,39 +13,55 @@ html
   box-sizing inherit
 
 body
-  font-family Enriqueta, Georgia, serif
+  font-family 'Roboto Slab', Georgia, serif
   font-size 16px
+  font-weight 300
 
 section
   position relative
   display block
   margin-bottom 37px
+  max-width 700px
   width 100%
 
 h2, h3
   font-size inherit
+  font-weight 400
 
 h2
-  &, &:before
-    width 125px
+  width 135px
+  font-weight 100
+  /* &, &:before */
+  /*   width 125px */
   clear right
   text-align right
-  padding-right 26px
-  font-variant small-caps
+  padding 26px
+  padding-left 16px
   margin 0
   margin-bottom 37px
   height 100%
   position absolute
   left 0
   top 0
-  &:after
-    content ''
-    position absolute
-    top 0
-    bottom 0
-    z-index -1
-    left 124px
-    border-right 1px solid black
+  /* &:after */
+  /*   content '' */
+  /*   position absolute */
+  /*   top 0 */
+  /*   bottom 0 */
+  /*   z-index -1 */
+  /*   left 124px */
+  /*   border-right 1px solid black */
+
+  color white
+  font-variant normal
+  &.blue
+    background-color #087acb
+  &.purple
+    background-color #6c3e96
+  &.green
+    background-color #4cb048
+  &.orange
+    background-color #f06600
 
 h3
   display inline-block
@@ -56,6 +72,8 @@ section .content
   max-width 700px
   width 100%
   padding-left 151px  /* 125+26 */
+  padding-top 26px
+  padding-bottom 26px
 
   & *:first-child
     smush-up()
@@ -64,7 +82,7 @@ section .content
     smush-down()
 
 .dates
-  font-weight bold
+  font-weight 400
   float right
 
 ul

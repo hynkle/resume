@@ -23,10 +23,10 @@ var stylusStyles = pickFiles(rootPath, {
 
 
 var html = jade(jadeTemplates);
-// var html = htmlmin(html);
+var html = htmlmin(html);
 
 var styles = stylus(stylusStyles);
 var styles = autoprefixer(styles);
-// var styles = cleanCSS(styles);
+var styles = cleanCSS(styles);
 
 module.exports = mergeTrees([html, styles]);

@@ -6,6 +6,18 @@ smush-down()
   margin-bottom 0
   padding-bottom 0
 
+parenthesize()
+  &:before
+    content '('
+  &:after
+    content ')'
+
+bare-list()
+  list-style none
+  padding-left 0
+  margin 0
+
+
 html
   box-sizing border-box
 
@@ -15,45 +27,38 @@ html
 body
   font-family 'Roboto Slab', Georgia, serif
   font-size 16px
+  @media print
+    font-size 12px
+    text-align justify
   font-weight 300
 
 section
-  position relative
-  display block
-  margin-bottom 37px
-  max-width 700px
-  width 100%
+  @media screen and (min-width: 768px)
+    position relative
+    display block
+    margin-bottom 37px
+    max-width 700px
+    width 100%
+  @media print
+    position relative
+    margin-bottom: 37px
 
-h2, h3
-  font-size inherit
-  font-weight 400
+h1
+  font-size 37px
+  padding 0 28px
+  @media screen and (min-width: 768px)
+    font-size 37px
+    padding 0 50px
+  @media print
+    font-size 28px
+    padding 0 100px 21px 100px
 
 h2
-  width 135px
-  font-weight 100
-  /* &, &:before */
-  /*   width 125px */
-  clear right
-  text-align right
-  padding 26px
-  padding-left 16px
-  margin 0
-  margin-bottom 37px
-  height 100%
-  position absolute
-  left 0
-  top 0
-  /* &:after */
-  /*   content '' */
-  /*   position absolute */
-  /*   top 0 */
-  /*   bottom 0 */
-  /*   z-index -1 */
-  /*   left 124px */
-  /*   border-right 1px solid black */
-
   color white
   font-variant normal
+  font-size 21px
+  font-weight 300
+  padding 0 16px
   &.blue
     background-color #087acb
   &.purple
@@ -62,36 +67,96 @@ h2
     background-color #4cb048
   &.orange
     background-color #f06600
+  @media screen and (min-width: 768px)
+    font-size inherit
+    font-weight 100
+    width 135px
+    clear right
+    text-align right
+    padding 26px
+    margin 0
+    margin-bottom 37px
+    height 100%
+    position absolute
+    left 0
+    top 0
+  @media print
+    width 100px
+    color inherit
+    text-align right
+    font-size inherit
+    font-weight 700
+    float left
+    left 0
+    padding 0
+    padding-right 26px
+    margin 0
+    &, &:before
+      width 100px
+    &:after
+      content ''
+      position absolute
+      top 0
+      bottom 0
+      z-index -1
+      left 100px
+      border-right 1px solid black
+    &.blue, &.purple, &.green, &.orange
+      background-color inherit
 
 h3
-  display inline-block
-  margin 0
   font-size inherit
+  font-weight 400
+  font-size inherit
+  margin 0
+  font-weight 700
+  @media screen and (min-width: 768px)
+    display inline-block
+    font-weight 400
+  @media print
+    display inline-block
 
 section .content
-  max-width 700px
-  width 100%
-  padding-left 151px  /* 125+26 */
-  padding-top 26px
-  padding-bottom 26px
+  padding 0 21px
+  @media screen and (min-width: 768px)
+    max-width 700px
+    width 100%
+    padding-left 151px  /* 125+26 */
+    padding-top 26px
+    padding-bottom 26px
 
-  & *:first-child
-    smush-up()
+    & *:first-child
+      smush-up()
 
-  & *:last-child
-    smush-down()
+    & *:last-child
+      smush-down()
+
+  @media print
+    padding-left 126px  /* 125 + 26 */
 
 .dates
-  font-weight 400
-  float right
+  @media screen and (max-width: 767px)
+    parenthesize()
+  @media screen and (min-width: 768px)
+    font-weight 400
+    float right
+  @media print
+    font-weight 700
+    float right
 
 ul
   padding-left 21px
+  @media screen and (min-width: 768px)
+    bare-list()
+  @media print
+    bare-list()
 
 ul.bare, li.bare
-  list-style none
-  padding-left 0
-  margin 0
+  bare-list()
+
+ul.bulleted
+  list-style disc 
+  padding-left 21px
 
 .smush-down
   smush-down()
@@ -105,3 +170,10 @@ a
 
   &:hover
     color #aaa
+
+  @media print
+    text-decoration none
+
+
+
+

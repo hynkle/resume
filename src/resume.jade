@@ -4,14 +4,15 @@ html(lang='en')
     meta(charset='utf-8')
     title Jonathan Hinkle's resume
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css')
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto+Slab:100,700,400,300')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto+Slab:100,700,400,300')
     link(rel='stylesheet', href='styles.css')
+    meta(name='viewport', content='width=device-width; initial-scale=1.0')
   body
     h1 Jonathan Hinkle
     section
       h2.blue Skills and Tools
       .content
-        ul.bare
+        ul
           li Ruby
           li Rails (and other Rack-based frameworks like Sinatra and Grape)
           li SQL databases (PostgreSQL and MySQL)
@@ -61,7 +62,7 @@ html(lang='en')
 
         p.smush-down.
           Contributed to the following open source projects:
-        ul.smush-up
+        ul.bulleted.smush-up
           li.
             <a href="https://github.com/ianwhite/pickle">pickle</a>,
             a collection of model-related step definitions and machinery for Cucumber

@@ -13,39 +13,49 @@ html
   box-sizing inherit
 
 body
-  width 700px
   font-family Enriqueta, Georgia, serif
-  display flex
-  flex-flow row wrap
   font-size 16px
 
-h1
-  flex 1 100%
+section
+  position relative
+  display block
+  margin-bottom 37px
+  width 100%
 
 h2, h3
   font-size inherit
 
 h2
-  width 125px
-  float left
+  &, &:before
+    width 125px
   clear right
   text-align right
-  border-right 1px solid black
   padding-right 26px
   font-variant small-caps
   margin 0
   margin-bottom 37px
+  height 100%
+  position absolute
+  left 0
+  top 0
+  &:after
+    content ''
+    position absolute
+    top 0
+    bottom 0
+    z-index -1
+    left 124px
+    border-right 1px solid black
 
 h3
   display inline-block
   margin 0
   font-size inherit
 
-section
-  width 575px
-  float right
-  padding-left 26px
-  margin-bottom 37px
+section .content
+  max-width 700px
+  width 100%
+  padding-left 151px  /* 125+26 */
 
   & *:first-child
     smush-up()

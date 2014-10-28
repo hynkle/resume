@@ -22,7 +22,8 @@ module.exports = function(grunt) {
       sync: {
         options: {
           bucket: aws_data.bucket,
-          differential: true
+          differential: true,
+          access: 'public-read'
         },
         files: [
           {expand: true, cwd: 'dist/', src: '**', dest: 'resume/'},

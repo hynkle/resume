@@ -42,9 +42,4 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean', 'broccoli_build']);
   grunt.registerTask('deploy', ['build', 'aws_s3:sync']);
 
-  // console.log(JSON.stringify(process.env, 1, 2));
-  // process.abort();
-
-  // grunt.registerTask('dev', ['env:dev', 'lint', 'server', 'watch']);
-  // grunt.registerTask('build', ['env:build', 'lint', 'other:build:tasks']);
 };

@@ -26,8 +26,7 @@ module.exports = function(grunt) {
           access: 'public-read'
         },
         files: [
-          {expand: true, cwd: 'dist/', src: '**', dest: 'resume/'},
-          {dest: aws_data.prefix, cwd: 'dist/', action: 'delete'}
+          {expand: true, cwd: 'dist/', src: '**', dest: aws_data.prefix}
         ]
         
       }
